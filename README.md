@@ -41,3 +41,25 @@ Usamos el useLayoutEffect para ver los cambios de estado de las dimensiones de u
 
 - estilo.css / estilo.sass = Estilos
 - Layout = Misma prueba copiando los MultiplesHook, en este caso para ver que cambios se hacen cada vez que renderizamos la aplicación.
+
+## Memorize
+#### React.memo
+
+Usamos el componente memo que volverá a calcular el valor memorizado cuando una de las dependencias haya cambiado. Esta optimización ayuda a evitar cálculos costosos en cada render.
+
+- estilo.css / estilo.sass = Estilos
+- Memorize = Ejemplo sencillo del uso de memo para que no cambie el valor de un contador.
+- Small = Una etiqueta small que evitamos cambie su valor con memo, este botón modifica desde memorize.
+- MemoHook = Similar al anterior, ejemplo previo en donde hacemos uso del memo para evitar que un ciclo for nos colapse nuestra memoria; llamamos a procesoPesado, enrutado en helpers el cual hará un ciclo for establecido en el useCounter del useState.
+
+## CallBackHook
+#### useCallBack
+
+Usamos el hook useCallBack este devolverá una versión memorizada del callback que solo cambia si una de las dependencias ha cambiado.
+
+- ShowIncrement = componente Botón que usa memo al cual le enviamos como paramentro el increment.
+- CallBackHook = hace uso del hook useCallBack que se le pasara un numero como parametro para que contador lo sume y este se renderice nuevamente, también hacemos uso del hook useEffect.
+
+## Tarea Memo
+
+Acá nos dan como taréa hacer el uso del memo y useCallBack, con un arreglo de 5 botones, debemos hacer uso del memo en el botón y el callback en el useState y así evitar que se renderize nuevamente los componentes al presionar el botón.
