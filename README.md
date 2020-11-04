@@ -63,3 +63,16 @@ Usamos el hook useCallBack este devolverá una versión memorizada del callback 
 ## Tarea Memo
 
 Acá nos dan como taréa hacer el uso del memo y useCallBack, con un arreglo de 5 botones, debemos hacer uso del memo en el botón y el callback en el useState y así evitar que se renderize nuevamente los componentes al presionar el botón.
+
+## intro-reducer & TodoApp
+#### useReducer
+
+Usamos el hook useReducer (como alternativa a useState).
+
+- estilo.css / estilo.sass = Estilos
+- intro-reducer = Pequeña introducción en donde ponemos en practica el useReducer y para que se utiliza.
+- TodoApp = Componente principal en donde hacemos uso del Reducer. Hace uso de localstore .getItem & setItem para mantener la información localmente cuando recargamos la página; parte el reducer con un init, este con un arreglo vacío; una función para agregar una nueva descripción a la lista, una función para eliminar una descripción de la lista y una función de toggle para marcar una acción realizada de la lista (esto con una propiedad de css).
+- todoReducer = Componente que posee un Switch con las acciones a realizar enviadas por botones de un formulario, provenientes de TodoApp.
+- TodoList = Una Lista ordenada que recorrera un arreglo y los mostrara.
+- TodoListItems = Una lista ordenada, que contendrá un parrafo con una descripción enviada desde un formulario, y un botón para eliminar ese parrafo (handleDelete) desde TodoApp.
+- TodoApp = Contendra el formulario, además de usar el customHook useForm, este tendra una función para al momento de activar el botón, enviar la información como un objeto a la función handleAddTodo.
