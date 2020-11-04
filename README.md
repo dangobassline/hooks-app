@@ -76,3 +76,12 @@ Usamos el hook useReducer (como alternativa a useState).
 - TodoList = Una Lista ordenada que recorrera un arreglo y los mostrara.
 - TodoListItems = Una lista ordenada, que contendrá un parrafo con una descripción enviada desde un formulario, y un botón para eliminar ese parrafo (handleDelete) desde TodoApp.
 - TodoApp = Contendra el formulario, además de usar el customHook useForm, este tendra una función para al momento de activar el botón, enviar la información como un objeto a la función handleAddTodo.
+
+## MainApp
+#### useContext
+
+- MainApp = Este es el componente principal mostrado en el index, contiene un componente de AppRouter con las rutas y llamamos al componente UserContext.
+HomeScreen / AboutScreen / LoginScreen = Componentes de pruebas para usar Link de BrowserRouter.
+Navbar = Como el nombre lo dice hacemos un Navbar con los Link en este caso usamos NavLink para agregar propiedades como ClassName active de bootstrap y cuando estamos en cierto path nos la mostrara como active.
+AppRouter = Hacemos uso del npm React Router, muy util al momento de definir los path de nuestra app, nos ayuda a llevar un control claro de las rutas y poder exportarlo a nuestro MainApp.
+UserContext = Ejemplo de uso del useContext, en donde controlamos desde el MainApp, datos que se mostraran en los componentes hijos, sin tener que llamar innecesariamente cada vez que lo solicitemos.
