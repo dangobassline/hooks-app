@@ -81,7 +81,18 @@ Usamos el hook useReducer (como alternativa a useState).
 #### useContext
 
 - MainApp = Este es el componente principal mostrado en el index, contiene un componente de AppRouter con las rutas y llamamos al componente UserContext.
-HomeScreen / AboutScreen / LoginScreen = Componentes de pruebas para usar Link de BrowserRouter.
-Navbar = Como el nombre lo dice hacemos un Navbar con los Link en este caso usamos NavLink para agregar propiedades como ClassName active de bootstrap y cuando estamos en cierto path nos la mostrara como active.
-AppRouter = Hacemos uso del npm React Router, muy util al momento de definir los path de nuestra app, nos ayuda a llevar un control claro de las rutas y poder exportarlo a nuestro MainApp.
-UserContext = Ejemplo de uso del useContext, en donde controlamos desde el MainApp, datos que se mostraran en los componentes hijos, sin tener que llamar innecesariamente cada vez que lo solicitemos.
+- HomeScreen / AboutScreen / LoginScreen = Componentes de pruebas para usar Link de BrowserRouter.
+- Navbar = Como el nombre lo dice hacemos un Navbar con los Link en este caso usamos NavLink para agregar propiedades como ClassName active de bootstrap y cuando estamos en cierto path nos la mostrara como active.
+- AppRouter = Hacemos uso del npm React Router, muy util al momento de definir los path de nuestra app, nos ayuda a llevar un control claro de las rutas y poder exportarlo a nuestro MainApp.
+- UserContext = Ejemplo de uso del useContext, en donde controlamos desde el MainApp, datos que se mostraran en los componentes hijos, sin tener que llamar innecesariamente cada vez que lo solicitemos.
+
+## Realizando Test
+
+Realizaremos los test necesarios.
+
+- HookApp.test = Hacemos un snapshot
+- useCounter.test = Testeamos el counter, incrementando, decrementando y volviendolo a su estado inicial.
+- useForm.test = Testeamos regresando el valor por defecto, testeamos cambiando un valor; en este caso el name, y luego testeamos haciendo el reset volviendo al initialState.
+- useFetch.test = Testeamos el retornar la información por defecto, luego testeamos que reciba un data, por lo que loading y error debiesen ser false, luego testeamos un .catch forzando un error para hacerle pruebas al error.
+- MultipleCustomHooks.test = Nos muestra un snapshot en donde descartamos el uso del fetch ya que no nos interesa hacerle pruebas, esto deberia de moestrarnos el estado por defecto; luego testeamos mandandole información al data para que cambie el componente y nos muestre si los existen x componentes.
+- RealExampleRef.test = Testeamos de que el componente exista, haciendo un snapshot y consultamos en estado default si encuentra un componente que no debiese mostrar (false), en el siguiente test simulamos un click por lo que el componente que estaba en false, ahora tiene que mostrarse(true).
