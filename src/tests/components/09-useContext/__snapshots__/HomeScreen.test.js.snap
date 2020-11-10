@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <HomeScreen /> should de mostrar el componente 1`] = `
+<div>
+  <h1>
+    HomeScreen
+  </h1>
+  <hr />
+  <pre
+    className="container"
+  >
+    {
+   "name": "Dango",
+   "email": "dango@mail.com"
+}
+  </pre>
+</div>
+`;
